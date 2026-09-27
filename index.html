@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TruckPak — aplikacja dla kierowców do prowadzenia dnia pracy, klientów, pojazdów, zdjęć i kopii danych. Publiczne demo projektu." />
+  <title>TruckPak — aplikacja dla kierowców</title>
+  <style>
+    :root{--bg:#0b1020;--card:#11182b;--card2:#18223a;--text:#f6f8fb;--muted:#aeb8cc;--accent:#54d08a;--accent2:#78a8ff;--border:rgba(255,255,255,.09);--shadow:0 22px 70px rgba(0,0,0,.35)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:radial-gradient(circle at 75% 0%,#162447 0,transparent 35%),var(--bg);color:var(--text);line-height:1.55}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.brand{font-weight:800;letter-spacing:.3px}.brand span{color:var(--accent)}.navlinks{display:flex;gap:20px;color:var(--muted);font-size:14px}.navlinks a{text-decoration:none}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding:54px 0 80px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);background:rgba(255,255,255,.035);border-radius:999px;padding:7px 12px;color:#dbe4f5;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:20px 0 22px;letter-spacing:-2.5px}.lead{font-size:20px;color:var(--muted);max-width:720px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid var(--border)}.primary{background:var(--accent);color:#07110b;border-color:transparent}.secondary{background:rgba(255,255,255,.04)}.phonewrap{display:flex;justify-content:center}.phone{width:min(330px,90vw);border:1px solid rgba(255,255,255,.14);border-radius:36px;padding:12px;background:#050810;box-shadow:var(--shadow);transform:rotate(1.6deg)}.screen{min-height:620px;border-radius:27px;padding:22px;background:linear-gradient(180deg,#f8fafc,#eef2f7);color:#111827;overflow:hidden}.screenhead{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:22px}.pill{font-size:12px;background:#dff7e9;color:#17643a;padding:6px 9px;border-radius:999px}.bigtime{font-size:42px;font-weight:850;letter-spacing:-1px}.sub{color:#6b7280;font-size:14px}.phonecard{margin-top:18px;padding:16px;background:white;border-radius:18px;border:1px solid #e5e7eb}.phonecard strong{display:block;margin-bottom:8px}.row{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-top:1px solid #eef0f3;font-size:14px}.green{margin-top:16px;padding:15px;border-radius:14px;background:#173d2b;color:#effff5;text-align:center;font-weight:800}.section{padding:74px 0}.section h2{font-size:clamp(30px,4vw,48px);letter-spacing:-1px;margin:0 0 12px}.sectionintro{color:var(--muted);max-width:760px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--border);padding:24px;border-radius:20px}.icon{font-size:24px}.card h3{margin:10px 0 7px}.card p{margin:0;color:var(--muted);font-size:15px}.demo{border:1px solid var(--border);border-radius:26px;background:linear-gradient(135deg,#14213d,#0f1728);padding:28px;box-shadow:var(--shadow)}.demohead{display:flex;justify-content:space-between;gap:24px;align-items:center}.status{display:inline-flex;align-items:center;gap:8px;color:#dce7f7;font-size:14px}.status i{width:9px;height:9px;border-radius:50%;background:#ffcc66;display:inline-block}.emulator{margin-top:22px;min-height:420px;border:1px dashed rgba(255,255,255,.2);border-radius:20px;display:grid;place-items:center;text-align:center;padding:28px;background:rgba(0,0,0,.15)}.emulator p{max-width:560px;color:var(--muted)}.privacy{display:grid;grid-template-columns:1fr 1fr;gap:20px}.note{padding:24px;border:1px solid var(--border);border-radius:20px;background:rgba(255,255,255,.03)}footer{padding:44px 0 70px;color:var(--muted);font-size:14px;border-top:1px solid var(--border)}@media(max-width:820px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:28px}.grid{grid-template-columns:1fr}.privacy{grid-template-columns:1fr}.phone{transform:none}.demohead{display:block}.hero{gap:34px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav"><div class="brand">Truck<span>Pak</span></div><div class="navlinks"><a href="#funkcje">Funkcje</a><a href="#demo">Demo</a><a href="#prywatnosc">Prywatność</a></div></nav>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Android · wersja testowa 0.1.0</div>
+          <h1>Dzień kierowcy w jednym miejscu.</h1>
+          <p class="lead">TruckPak porządkuje przebieg pracy kierowcy: dzień, klientów, postoje, pojazdy, zdjęcia i historię — bez konta i bez konieczności stałego połączenia z internetem.</p>
+          <div class="actions"><a class="btn primary" href="#demo">Uruchom demo</a><a class="btn secondary" href="#funkcje">Zobacz funkcje</a></div>
+        </div>
+        <div class="phonewrap" aria-label="Podgląd interfejsu TruckPak">
+          <div class="phone"><div class="screen">
+            <div class="screenhead"><span>TruckPak</span><span class="pill">PRACA</span></div>
+            <div class="sub">Rozpoczęcie dnia</div><div class="bigtime">06:42</div>
+            <div class="phonecard"><strong>Dzisiejsza trasa</strong><div class="row"><span>Klienci</span><b>3</b></div><div class="row"><span>Pojazd</span><b>Aktywny</b></div><div class="row"><span>Zdarzenia</span><b>7</b></div></div>
+            <div class="phonecard"><strong>Szybkie akcje</strong><div class="row"><span>＋ Dodaj klienta</span><span>›</span></div><div class="row"><span>⇄ Załadunek / rozładunek</span><span>›</span></div><div class="row"><span>◉ Inne zdarzenie</span><span>›</span></div></div>
+            <div class="green">Zakończ dzień</div>
+          </div></div>
+        </div>
+      </section>
+
+      <section id="funkcje" class="section">
+        <h2>Najważniejsze funkcje</h2>
+        <p class="sectionintro">Pierwsza wersja skupia się na praktycznej pracy kierowcy i lokalnym przechowywaniu danych.</p>
+        <div class="grid">
+          <article class="card"><div class="icon">⏱️</div><h3>Dzień i odpoczynek</h3><p>Start i koniec dnia, historia, korekty oraz informacje o przerwach i odpoczynku.</p></article>
+          <article class="card"><div class="icon">📍</div><h3>Klienci i miejsca</h3><p>Klienci, ostatnie i częste miejsca, własne typy zdarzeń, notatki, palety i tankowania.</p></article>
+          <article class="card"><div class="icon">🚛</div><h3>Pojazdy i naczepy</h3><p>Zmiany zestawu, historia rejestracji, odbiór i zdanie pojazdu także poza rozpoczętym dniem.</p></article>
+          <article class="card"><div class="icon">📷</div><h3>Zdjęcia</h3><p>Zdjęcia z aparatu lub importu, kompresja, kategorie, komentarze i porządkowanie lokalne.</p></article>
+          <article class="card"><div class="icon">🗓️</div><h3>Wyjazdy i kalendarz</h3><p>Planowane i rzeczywiste daty wyjazdów, systemy pracy oraz ręczne okresy w kalendarzu.</p></article>
+          <article class="card"><div class="icon">💾</div><h3>Kopie danych</h3><p>Eksport i odtwarzanie kopii danych aplikacji, aby użytkownik zachował kontrolę nad własną historią.</p></article>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="demo">
+          <div class="demohead"><div><h2>Interaktywne demo</h2><p class="sectionintro" style="margin-bottom:0">Tutaj będzie można uruchomić prawdziwą wersję APK w emulatorze Android działającym bezpośrednio w przeglądarce.</p></div><div class="status"><i></i> Konfiguracja emulatora w toku</div></div>
+          <div class="emulator"><div><h3>Demo TruckPak pojawi się tutaj</h3><p>Publiczna strona jest już przygotowana. Kolejnym krokiem jest podłączenie APK do usługi emulatora i osadzenie sesji w tym miejscu.</p></div></div>
+        </div>
+      </section>
+
+      <section id="prywatnosc" class="section">
+        <h2>Prywatność i architektura</h2>
+        <div class="privacy"><div class="note"><h3>Offline-first</h3><p class="sectionintro" style="margin:0">TruckPak jest projektowany tak, aby podstawowe funkcje działały lokalnie na telefonie bez stałej transmisji danych.</p></div><div class="note"><h3>Kod źródłowy prywatny</h3><p class="sectionintro" style="margin:0">Ta strona pokazuje działanie i rozwój aplikacji. Pełny kod projektu oraz konfiguracja techniczna pozostają w prywatnym repozytorium.</p></div></div>
+      </section>
+    </main>
+    <footer>TruckPak · projekt w aktywnym rozwoju · publiczna strona demonstracyjna</footer>
+  </div>
+</body>
+</html>
