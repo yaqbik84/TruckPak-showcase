@@ -3,28 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="TruckPak — pełnoekranowe interaktywne demo Android." />
+  <meta name="description" content="TruckPak — uruchom interaktywne demo Android." />
   <title>TruckPak — demo Android</title>
   <style>
     :root{--bg:#0b1020;--text:#f6f8fb;--muted:#aeb8cc;--accent:#54d08a;--border:rgba(255,255,255,.1)}
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-    body{min-height:100dvh;display:flex;flex-direction:column}
-    header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid var(--border);background:rgba(11,16,32,.96)}
-    .brand{font-weight:800}.brand span{color:var(--accent)}
-    a{color:var(--muted);text-decoration:none;font-size:14px}
-    main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px}
-    .frame{width:min(430px,100%);height:min(840px,calc(100dvh - 86px));min-height:620px;display:flex;align-items:center;justify-content:center}
-    iframe{display:block;width:100%;height:100%;border:0;background:#050810}
-    @media(max-width:520px){header{padding:0 12px}.frame{width:100%;height:calc(100dvh - 76px);min-height:560px}main{padding:8px}}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}body{min-height:100dvh;display:flex;flex-direction:column}header{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid var(--border);background:rgba(11,16,32,.96)}.brand{font-weight:800}.brand span{color:var(--accent)}a{color:var(--muted);text-decoration:none;font-size:14px}main{flex:1;display:flex;align-items:center;justify-content:center;padding:20px}.panel{width:min(560px,100%);border:1px solid var(--border);border-radius:26px;background:radial-gradient(circle at 50% 0%,#1a2c52 0,transparent 45%),#10172a;padding:38px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.38)}.phone{width:132px;height:248px;border:8px solid #050810;border-radius:28px;background:linear-gradient(180deg,#f8fafc,#e9eef5);position:relative;margin:0 auto 26px;box-shadow:0 18px 40px rgba(0,0,0,.32)}.phone:before{content:"";position:absolute;top:8px;left:50%;width:40px;height:5px;border-radius:8px;background:#151923;transform:translateX(-50%)}.phone:after{content:"TruckPak";position:absolute;top:52px;left:0;right:0;color:#111827;font-weight:800;font-size:16px}h1{margin:0 0 10px;font-size:32px}.lead{color:var(--muted);line-height:1.6;margin:0 auto 24px;max-width:460px}.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid var(--border);cursor:pointer;font:inherit}.primary{background:var(--accent);color:#07110b;border-color:transparent}.secondary{background:rgba(255,255,255,.04);color:var(--text)}.hint{margin:18px 0 0;color:var(--muted);font-size:13px;line-height:1.5}@media(max-width:520px){header{padding:0 12px}.panel{padding:28px 20px}h1{font-size:27px}}
   </style>
 </head>
 <body>
   <header><div class="brand">Truck<span>Pak</span></div><a href="./#demo">← Wróć do strony projektu</a></header>
   <main>
-    <div class="frame">
-      <iframe src="https://appetize.io/embed/b_vkb643xtqoppffkj7t4wkkga3a?centered=both&amp;scale=auto&amp;codec=jpeg" title="TruckPak — interaktywne demo Android" allow="camera; microphone; clipboard-read; clipboard-write; fullscreen" allowfullscreen></iframe>
-    </div>
+    <section class="panel">
+      <div class="phone" aria-hidden="true"></div>
+      <h1>Demo TruckPak</h1>
+      <p class="lead">Plan Free Appetize nie pozwala osadzać emulatora w naszej stronie. Możesz jednak uruchomić prawdziwe APK w osobnym oknie przeglądarki.</p>
+      <div class="buttons">
+        <button class="btn primary" type="button" onclick="openTruckPakDemo()">Uruchom wyśrodkowane okno</button>
+        <a class="btn secondary" href="https://appetize.io/app/b_vkb643xtqoppffkj7t4wkkga3a?device=pixel7&amp;osVersion=13.0&amp;scale=75&amp;codec=jpeg" target="_blank" rel="noopener noreferrer">Pełna karta Appetize</a>
+      </div>
+      <p class="hint">Strona TruckPak może wyśrodkować całe okno demo. Po jego otwarciu rozmieszczenie elementów wewnątrz strony Appetize jest już kontrolowane przez Appetize.</p>
+    </section>
   </main>
+  <script>
+    function openTruckPakDemo(){
+      const url='https://appetize.io/app/b_vkb643xtqoppffkj7t4wkkga3a?device=pixel7&osVersion=13.0&scale=75&codec=jpeg';
+      const width=Math.max(420,Math.min(620,screen.availWidth-40));
+      const height=Math.max(700,Math.min(900,screen.availHeight-80));
+      const left=Math.max(0,Math.round((screen.availWidth-width)/2));
+      const top=Math.max(0,Math.round((screen.availHeight-height)/2));
+      const win=window.open(url,'truckpak-demo',`popup=yes,width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`);
+      if(win)win.focus();else window.open(url,'_blank','noopener,noreferrer');
+    }
+  </script>
 </body>
 </html>
