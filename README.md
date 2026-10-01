@@ -1,17 +1,29 @@
-# TruckPak — public showcase
+# TruckPak
 
-Publiczna strona prezentacyjna projektu **TruckPak**.
+Publiczna prezentacja aplikacji **TruckPak** — mobilnego dziennika pracy kierowcy na Androida.
 
-Pełny kod źródłowy aplikacji pozostaje w prywatnym repozytorium. To repozytorium zawiera wyłącznie materiały publiczne: stronę projektu, opis funkcji i miejsce na interaktywne demo APK uruchamiane w przeglądarce.
+**Strona projektu:** https://yaqbik84.github.io/TruckPak-showcase/  
+**Demo Android:** https://appetize.io/app/b_vkb643xtqoppffkj7t4wkkga3a
 
-## Publiczny zakres
+## O aplikacji
 
-- opis funkcji aplikacji,
-- prezentacja projektu,
-- informacje o wersji testowej,
-- interaktywne demo po podłączeniu emulatora Android,
-- bez backendu, sekretów, kluczy podpisu i prywatnego kodu źródłowego.
+TruckPak porządkuje przebieg dnia pracy kierowcy w jednym miejscu. Pierwsza wersja działa lokalnie, bez rejestracji i bez konieczności stałego połączenia z internetem.
 
-## Uruchomienie strony
+Najważniejsze funkcje:
 
-Strona znajduje się w `index.html` i jest przygotowana do publikacji przez GitHub Pages z gałęzi `main`.
+- start i zakończenie dnia pracy,
+- przerwy i odpoczynek,
+- klienci i odwiedzane miejsca,
+- załadunki, rozładunki i inne zdarzenia,
+- pojazdy i naczepy,
+- zdjęcia z kompresją i lokalnym przechowywaniem,
+- kalendarz wyjazdów,
+- eksport i odtwarzanie kopii danych.
+
+## Status
+
+Aktualna publiczna prezentacja dotyczy wersji bazowej **0.1.0**. Projekt jest rozwijany etapami, a kolejne funkcje powstają na prywatnym repozytorium źródłowym.
+
+## Prywatność
+
+To repozytorium zawiera wyłącznie publiczną warstwę prezentacyjną. Nie zawiera prywatnego kodu źródłowego aplikacji, kluczy podpisujących, sekretów ani danych użytkowników.
